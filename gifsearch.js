@@ -15,6 +15,14 @@ function getGifs(searchTags) {
   });
 }
 
+// Tags that will show up as examples
+var allTags = ["any", "hundo", "trueskip", "everred", "noot"];
+var everredTags = ["any", "hundo", "trueskip", "gemskip"];
+var nootTags = ["any", "hundo"];
+var adelieTags = ["any", "hundo", "gemskip"];
+
+var tagsField = document.getElementById("tags");
+var modSelect = document.getElementById("modName");
 let textbox = document.getElementById('search')
 let submitButton = document.getElementById('submit');
 
@@ -23,14 +31,42 @@ textbox.addEventListener("keyup", (e) => {
     submitButton.click();
 });
 
+// Function that changes the example tags based on the selected dropdown option
+function changeTags() {
+  var modName = modSelect.options[modSelect.selectedIndex].value;
+  switch (modName) {
+    case "all":
+      tagsField.innerHTML = allTags;
+      break;
+    case "everred":
+      tagsField.innerHTML = everredTags;
+      break;
+    case "adelie":
+      tagsField.innerHTML = adelieTags;
+      break;
+    case "noot":
+      tagsField.innerHTML = nootTags;
+      break;
+  }
+}
+// Funtion to be triggered when the dropdown value changes
+modSelect.addEventListener("change", changeTags);
+
 submitButton.addEventListener('click', () => {
-  let searchTags = new Set(textbox.value.split(/\s+/).filter(x => x != ''));
+  var modName = modSelect.options[modSelect.selectedIndex].value;
+  if (modName == "all") {
+    querry = textbox.value;
+  }
+  else {
+    querry = textbox.value + ' ' + modName;
+  }
+  let searchTags = new Set(querry.split(/\s+/).filter(x => x != ''));
   if (searchTags.size == 0)
     return;
 
   let content = document.getElementById('content');
   while (content.firstChild) {
-   content.firstChild.remove();
+    content.firstChild.remove();
   }
 
   let gifResults = getGifs(searchTags);
@@ -42,3 +78,5 @@ submitButton.addEventListener('click', () => {
     content.appendChild(img);
   }
 });
+
+window.onload = changeTags();
