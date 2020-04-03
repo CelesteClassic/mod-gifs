@@ -36,16 +36,16 @@ function changeTags() {
   var modName = modSelect.options[modSelect.selectedIndex].value;
   switch (modName) {
     case "all":
-      tagsField.innerHTML = allTags;
+      tagsField.innerHTML = allTags.join(', ');
       break;
     case "everred":
-      tagsField.innerHTML = everredTags;
+      tagsField.innerHTML = everredTags.join(', ');
       break;
     case "adelie":
-      tagsField.innerHTML = adelieTags;
+      tagsField.innerHTML = adelieTags.join(', ');
       break;
     case "noot":
-      tagsField.innerHTML = nootTags;
+      tagsField.innerHTML = nootTags.join(', ');
       break;
   }
 }
