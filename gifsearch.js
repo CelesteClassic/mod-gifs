@@ -16,7 +16,7 @@ function getGifs(searchTags) {
 }
 
 // Tags that will show up as examples
-var allTags = ["any", "hundo", "trueskip", "everred", "noot", "sparkleste];
+var allTags = ["any", "hundo", "trueskip", "everred", "noot", "sparkleste"];
 var everredTags = ["any", "hundo", "trueskip", "gemskip"];
 var nootTags = ["any", "hundo"];
 var adelieTags = ["any", "hundo", "gemskip"];
