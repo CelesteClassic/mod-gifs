@@ -16,10 +16,11 @@ function getGifs(searchTags) {
 }
 
 // Tags that will show up as examples
-var allTags = ["any", "hundo", "trueskip", "everred", "noot"];
+var allTags = ["any", "hundo", "trueskip", "everred", "noot", "sparkleste];
 var everredTags = ["any", "hundo", "trueskip", "gemskip"];
 var nootTags = ["any", "hundo"];
 var adelieTags = ["any", "hundo", "gemskip"];
+var sparklesteTags = ["any", "hundo"];
 
 var tagsField = document.getElementById("tags");
 var modSelect = document.getElementById("modName");
@@ -46,6 +47,9 @@ function changeTags() {
       break;
     case "noot":
       tagsField.innerHTML = nootTags.join(', ');
+      break;
+    case "sparkleste":
+      tagsField.innerHTML = sparklesteTags.join(', ');
       break;
   }
 }
