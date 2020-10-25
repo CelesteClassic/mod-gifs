@@ -20,6 +20,7 @@ var allTags = ["any", "hundo", "trueskip", "everred", "noot"];
 var everredTags = ["any", "hundo", "trueskip", "gemskip"];
 var nootTags = ["any", "hundo"];
 var adelieTags = ["any", "hundo", "gemskip"];
+var oldsiteTags = ["any, "hundo", "gemskip"];
 
 var tagsField = document.getElementById("tags");
 var modSelect = document.getElementById("modName");
@@ -46,6 +47,9 @@ function changeTags() {
       break;
     case "noot":
       tagsField.innerHTML = nootTags.join(', ');
+      break;
+    case "oldsite":
+      tagsField.innerHTML = oldsiteTags.join(', ');
       break;
   }
 }
