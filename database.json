@@ -1,6 +1,6 @@
 [
   {
-    "url": "gifs/1100/everred_0.gif",
+    "url": "mod-gifs-master/gifs/1100/everred_0.gif",
     "tags": [
 	  "everred",
       "1100",
@@ -9,10 +9,18 @@
     ]
   },
   {
-    "url": "gifs/1400/noot_0.gif",
+    "url": "mod-gifs-master/gifs/1400/noot_0.gif",
     "tags": [
 	  "noot",
       "1400",
+      "any"
+    ]
+  },
+  {
+    "url": "mod-gifs-master/gifs/100/oldsite_0.gif",
+    "tags": [
+	  "oldsite",
+      "100",
       "any"
     ]
   }
